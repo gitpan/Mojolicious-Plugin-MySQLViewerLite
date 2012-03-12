@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Plugin';
 use DBIx::Custom;
 use Validator::Custom;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 # Validator
 my $vc = Validator::Custom->new;
@@ -573,5 +573,16 @@ Database handle object in L<DBI>.
   prefix => 'mysqlviewerlite2'
 
 Application base path, default to C<mysqlviewerlite>.
+
+=head C<route>
+
+    route => $route
+
+Router, default to C<$app->routes>.
+
+It is useful when C<under> is used.
+
+  my $b = $r->under(sub { ... });
+  plugin 'MySQLViewerLite', dbh => $dbh, route => $b;
 
 =cut
