@@ -1,5 +1,5 @@
 {
-   "abstract" : "Mojolicious plugin to display mysql database information",
+   "abstract" : "Mojolicious plugin to display MySQL database information",
    "author" : [
       "Yuki Kimoto <kimoto.yuki@gmail.com>"
    ],
@@ -40,5 +40,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.06"
+   "version" : "0.07"
 }
