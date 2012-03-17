@@ -5,7 +5,7 @@ use File::Basename 'dirname';
 use Cwd 'abs_path';
 use Mojolicious::Plugin::MySQLViewerLite::Command;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 has command => sub {
   my $self = shift;
@@ -14,18 +14,20 @@ has command => sub {
 
 sub register {
   my ($self, $app, $conf) = @_;
-  my $dbh = $conf->{dbh};
   my $prefix = $conf->{prefix} // 'mysqlviewerlite';
-  my $r = $conf->{route} // $app->routes;
+  
+  # Database
+  my $connector = $conf->{connector};
+  my $dbh = $conf->{dbh};
+  if ($connector) { $self->dbi->connector($connector) }
+  else { $self->dbi->dbh($dbh) }
   
   # Add template path
   $self->add_template_path($app->renderer, __PACKAGE__);
   
-  # Set Attribute
-  $self->dbi->dbh($dbh);
-  $self->prefix($prefix);
-  
   # Routes
+  my $r = $conf->{route} // $app->routes;
+  $self->prefix($prefix);
   $r = $r->waypoint("/$prefix")->via('get')->to(
     'mysqlviewerlite#default',
     namespace => 'Mojolicious::Plugin::MySQLViewerLite',
@@ -60,7 +62,7 @@ sub register {
 
 =head1 NAME
 
-Mojolicious::Plugin::MySQLViewerLite - Mojolicious plugin to display MySQL database information
+Mojolicious::Plugin::MySQLViewerLite - Mojolicious plugin to display MySQL database information on browser
 
 =head1 SYNOPSYS
 
@@ -95,7 +97,7 @@ Display C<show create table>
 
 =item *
 
-Select * from TABLE limit 0, 1000
+Select * from TABLE
 
 =item *
 
@@ -105,11 +107,23 @@ Display C<primary keys>, C<null allowed columnes>, C<database engines> and C<cha
 
 =head1 OPTIONS
 
+=head2 C<connector>
+
+  connector => $connector
+
+Connector object such as L<DBIx::Connector> to connect to database.
+
+  my $connector = DBIx::Connector->connect(...);
+
+Connector has C<dbh> method to get database handle.
+
 =head2 C<dbh>
 
   dbh => $dbh
 
 Database handle object in L<DBI>.
+
+  my $dbh = DBI->connect(...);
 
 =head2 C<prefix>
 

@@ -1,5 +1,5 @@
 ---
-abstract: 'Mojolicious plugin to display MySQL database information'
+abstract: 'Mojolicious plugin to display MySQL database information on browser'
 author:
   - 'Yuki Kimoto <kimoto.yuki@gmail.com>'
 build_requires:
@@ -19,7 +19,8 @@ no_index:
     - inc
 requires:
   DBIx::Custom: 0.24
+  Data::Page: 2.02
   Mojolicious: 2.59
   Test::More: 0
   Validator::Custom: 0.1426
-version: 0.07
+version: 0.08

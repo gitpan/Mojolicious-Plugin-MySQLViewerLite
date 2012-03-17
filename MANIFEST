@@ -7,6 +7,7 @@ lib/Mojolicious/Plugin/MySQLViewerLite/Command.pm
 lib/Mojolicious/Plugin/MySQLViewerLite/Mysqlviewerlite.pm
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/layouts/mysqlviewerlite/common.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/default.html.ep
+lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/pagenavi.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/select.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/showcharsets.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/showcreatetables.html.ep
@@ -21,6 +22,7 @@ MYMETA.json
 MYMETA.yml
 README
 t/basic.t
+t/connector.t
 t/load.t
 t/test.pl
 META.yml                                 Module YAML meta-data (added by MakeMaker)
