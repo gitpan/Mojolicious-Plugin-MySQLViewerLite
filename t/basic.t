@@ -175,7 +175,7 @@ my $route_test;
       $route_test = 1;
       return 1;
     });
-    plugin 'MySQLViewerLite', dbh => $dbi->dbh, route => $b, prefix => 'other';
+    plugin 'MySQLViewerLite', dbi => $dbi, route => $b, prefix => 'other';
 }
 $app = Test2->new;
 $t = Test::Mojo->new($app);
