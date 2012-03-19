@@ -5,7 +5,7 @@ use File::Basename 'dirname';
 use Cwd 'abs_path';
 use Mojolicious::Plugin::MySQLViewerLite::Command;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 has command => sub {
   my $self = shift;
@@ -41,6 +41,7 @@ sub register {
     '#tables',
     utilities => [
       {path => 'showcreatetables', title => 'Show create tables'},
+      {path => 'showselecttables', title => 'Show select tables'},
       {path => 'showprimarykeys', title => 'Show primary keys'},
       {path => 'shownullallowedcolumns', title => 'Show null allowed columns'},
       {path => 'showdatabaseengines', title => 'Show database engines'},
@@ -49,6 +50,7 @@ sub register {
   );
   $r->get('/table')->to('#table');
   $r->get('/showcreatetables')->to('#showcreatetables');
+  $r->get('/showselecttables')->to('#showselecttables');
   $r->get('/showprimarykeys')->to('#showprimarykeys');
   $r->get('/shownullallowedcolumns')->to('#shownullallowedcolumns');
   $r->get('/showdatabaseengines')->to('#showdatabaseengines');

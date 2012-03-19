@@ -14,6 +14,7 @@ lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/showcreatetable
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/showdatabaseengines.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/shownullallowedcolumns.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/showprimarykeys.html.ep
+lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/showselecttables.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/table.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/tables.html.ep
 Makefile.PL
