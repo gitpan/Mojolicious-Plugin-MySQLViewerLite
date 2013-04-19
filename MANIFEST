@@ -19,6 +19,8 @@ lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/table.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/tables.html.ep
 Makefile.PL
 MANIFEST			This list of files
+Mojolicious-Plugin-MySQLViewerLite-0.15/META.json
+Mojolicious-Plugin-MySQLViewerLite-0.15/META.yml
 MYMETA.json
 MYMETA.yml
 README
