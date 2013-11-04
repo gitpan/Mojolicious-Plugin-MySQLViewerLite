@@ -5,6 +5,7 @@ lib/Mojolicious/Plugin/MySQLViewerLite/Base/Command.pm
 lib/Mojolicious/Plugin/MySQLViewerLite/Base/Mysqlviewerlite.pm
 lib/Mojolicious/Plugin/MySQLViewerLite/Command.pm
 lib/Mojolicious/Plugin/MySQLViewerLite/Mysqlviewerlite.pm
+lib/Mojolicious/Plugin/MySQLViewerLite/public/js/jquery-1.9.1.js
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/layouts/mysqlviewerlite/common.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/default.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/pagenavi.html.ep
@@ -19,10 +20,6 @@ lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/table.html.ep
 lib/Mojolicious/Plugin/MySQLViewerLite/templates/mysqlviewerlite/tables.html.ep
 Makefile.PL
 MANIFEST			This list of files
-Mojolicious-Plugin-MySQLViewerLite-0.15/META.json
-Mojolicious-Plugin-MySQLViewerLite-0.15/META.yml
-MYMETA.json
-MYMETA.yml
 README
 t/basic.t
 t/connector.t
